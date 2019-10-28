@@ -28,7 +28,8 @@ html {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 100; }
+  z-index: 100;
+  transition: all 0.2s; }
   @media only screen and (max-width: 35em) {
     .nav {
       height: 20vh; } }
@@ -67,6 +68,7 @@ html {
     .nav__links--element {
       color: #fff;
       cursor: pointer;
+      font-weight: 600;
       margin: 1.8rem;
       text-decoration: none;
       width: auto;
@@ -93,9 +95,11 @@ html {
     flex-direction: column;
     left: 50%;
     position: absolute;
-    top: 53%;
+    top: 57%;
     transform: translate(-50%, -50%);
     width: 80%; }
+    .header__info span {
+      color: #c90a0a; }
     .header__info--title {
       font-size: 7rem;
       margin-bottom: 3rem;
@@ -115,6 +119,23 @@ html {
       padding: 2rem 3rem;
       text-align: center;
       text-decoration: none;
+      text-transform: uppercase;
       transition: all 0.2s; }
       .header__info .button:hover {
         background-color: #c90a0a; }
+
+.aboutus {
+  height: 100vh;
+  background-color: #c90a0a; }
+
+.whiteBackground {
+  background-color: #fff; }
+
+.redText {
+  color: #c90a0a; }
+
+.highlightText {
+  color: #ff2e2e; }
+
+.whiteText {
+  color: #fff; }

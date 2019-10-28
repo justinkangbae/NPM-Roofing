@@ -44,6 +44,7 @@ html {
     top: 0;
     width: 100%;
     z-index: 100;
+    transition: all 0.2s;
 
     @media only screen and (max-width: $bp-small) {
         height: 20vh;
@@ -82,7 +83,6 @@ html {
     &__links {
         align-items: center;
         display: flex;
-        // flex: 1;
         font-size: 1.4rem;
         justify-content: space-between;
         list-style: none;
@@ -95,6 +95,7 @@ html {
         &--element {
             color: $color-white;
             cursor: pointer;
+            font-weight: 600;
             margin: 1.8rem;
             text-decoration: none;
             width: auto;
@@ -135,9 +136,13 @@ html {
         flex-direction: column;
         left: 50%;
         position: absolute;
-        top: 53%;
+        top: 57%;
         transform: translate(-50%, -50%);
         width: 80%;
+
+        span {
+            color: $color-primary;
+        }
 
         &--title {
             font-size: 7rem;
@@ -162,6 +167,7 @@ html {
             padding: 2rem 3rem;
             text-align: center;
             text-decoration: none;
+            text-transform: uppercase;
             transition: all 0.2s;
 
             &:hover {
@@ -170,3 +176,22 @@ html {
         }
     }
 }
+
+
+
+
+
+//ABOUT US
+.aboutus {
+    height: 100vh;
+    background-color: $color-primary;
+}
+
+
+
+
+
+.whiteBackground { background-color: $color-white; }
+.redText { color: $color-primary; }
+.highlightText { color: $color-primary-highlight; }
+.whiteText { color: $color-white; }
