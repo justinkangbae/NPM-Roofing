@@ -1,0 +1,14 @@
+{
+  "name": "roofingcompany",
+  "version": "1.0.0",
+  "description": "example roofing company website",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/site.scss css/site.css -w"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.13.0"
+  }
+}
