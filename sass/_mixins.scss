@@ -1,0 +1,7 @@
+@mixin hamburger {
+    width: 5.5rem;
+    height: 1rem;
+
+    background-color: $color-primary;
+    border-radius: 4rem;
+}

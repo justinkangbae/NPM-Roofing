@@ -2,8 +2,15 @@ $color-white: #fff;
 $color-black: #000;
 $color-primary: #c90a0a;
 $color-primary-highlight: #ff2e2e;
+$logo-hamburger-size: 8rem;
+$nav-height: 14vh;
 
 $bp-largest: 75em; //1200px
 $bp-large: 55em; //880px
+$bp-medium: 44em; //704px this is when navbar hamburger appears
 $bp-small: 35em; //560px
 $bp-smallest: 25em; //400px
+
+@media only screen and (max-width: $bp-small) {
+    $nav-height: 20vh;
+}
