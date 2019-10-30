@@ -7,7 +7,7 @@ const hamburgerTop = document.querySelector(".nav__hamburger--top");
 const hamburgerMid = document.querySelector(".nav__hamburger--mid");
 const hamburgerBot = document.querySelector(".nav__hamburger--bot");
 let topOffset = offset(navChange);
-navBarChange();
+init();
 
 window.addEventListener("scroll", () => {
     navBarChange();
@@ -46,6 +46,16 @@ function offset(el) {
     let rect = el.getBoundingClientRect();
     scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     return 0.25 * (rect.top + scrollTop);
+}
+
+function init() {
+    if(window.innerWidth <= 704) {
+        navElement.forEach(cur => {
+            cur.classList.add("invisibleElement");
+        });
+    }
+
+    navBarChange();
 }
 
 function navBarVisibility() {
