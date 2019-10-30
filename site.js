@@ -9,16 +9,31 @@ const hamburgerBot = document.querySelector(".nav__hamburger--bot");
 let topOffset = offset(navChange);
 navBarChange();
 
-// window.addEventListener("scroll", () => {
-//     navBarChange();
-
-//     if(hamburgerTop.classList.contains("navAnimationTop")) {
-//         navBarVisibility();
-//     }
-// });
+window.addEventListener("scroll", () => {
+    navBarChange();
+});
 
 window.addEventListener("resize", () => {
     topOffset = offset(navChange);
+
+    //if window is resized, check the size of the window and if its less than $bp-medium
+    // then change visibility of element
+    if(window.innerWidth <= 704) {
+        navElement.forEach(cur => {
+            cur.classList.add("invisibleElement");
+        });
+        
+        hamburgerMid.classList.remove("navAnimationMid");
+        hamburgerBot.classList.remove("navAnimationBot");
+        hamburgerTop.classList.remove("navAnimationTop");
+
+        navLinks.classList.remove("visible");
+    } else {
+        navElement.forEach(cur => {
+            cur.classList.remove("invisibleElement");
+        });
+    }
+
     navBarChange();
 });
 
@@ -30,7 +45,7 @@ hamburger.addEventListener("click", () => {
 function offset(el) {
     let rect = el.getBoundingClientRect();
     scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    return 0.25*(rect.top + scrollTop);
+    return 0.25 * (rect.top + scrollTop);
 }
 
 function navBarVisibility() {
@@ -39,11 +54,7 @@ function navBarVisibility() {
     hamburgerBot.classList.toggle("navAnimationBot");
 
     navElement.forEach(cur => {
-        if(cur.style.display == "block") {
-            cur.style.display = "none";
-        } else {
-            cur.style.display = "block";
-        }
+        cur.classList.toggle("invisibleElement");
     });
 
     navLinks.classList.toggle("visible");
@@ -51,25 +62,18 @@ function navBarVisibility() {
 
 function navBarChange() {
 
-    //for media query $bp-small, show navbar with white background at all times and show hamburger
-    if(window.innerWidth <= 700) {
-           
+    if (window.pageYOffset >= topOffset) {
+        navAll.classList.add("whiteBackground");
 
+        navElement.forEach(cur => {
+            cur.classList.add("redText");
+        });
+    }
+    else {
+        navAll.classList.remove("whiteBackground");
 
-    } else {
-        if(window.pageYOffset >= topOffset) {
-            navAll.classList.add("whiteBackground");
-    
-            navElement.forEach(cur => {
-                cur.classList.add("redText");
-            });
-        } 
-        else {
-            navAll.classList.remove("whiteBackground");
-    
-            navElement.forEach(cur => {
-                cur.classList.remove("redText");
-            });
-        }
+        navElement.forEach(cur => {
+            cur.classList.remove("redText");
+        });
     }
 }

@@ -65,7 +65,7 @@ html {
     list-style: none;
     position: relative;
     text-transform: uppercase;
-    transition: all 0.2s, transform 0s, height 0.3s; }
+    transition: all 0.2s, transform 0s, height 0.3s, background-color 0s; }
     @media only screen and (max-width: 44em) {
       .nav__links {
         background-color: #fff;
@@ -89,8 +89,7 @@ html {
       width: auto; }
       @media only screen and (max-width: 44em) {
         .nav__links--element {
-          color: #c90a0a;
-          display: none; } }
+          color: #c90a0a; } }
       .nav__links--element:hover {
         color: #c90a0a; }
       .nav__links--element i {
@@ -199,5 +198,5 @@ html {
   opacity: 1;
   visibility: visible; }
 
-.visibleElement {
-  height: 0; }
+.invisibleElement {
+  display: none; }

@@ -90,7 +90,7 @@ html {
         list-style: none;
         position: relative;
         text-transform: uppercase;
-        transition: all 0.2s, transform 0s, height 0.3s;
+        transition: all 0.2s, transform 0s, height 0.3s, background-color 0s;
 
         @media only screen and (max-width: $bp-medium) {
             background-color: $color-white;
@@ -118,7 +118,6 @@ html {
 
             @media only screen and (max-width: $bp-medium) {
                 color: $color-primary;
-                display: none;
             }
 
             &:hover {
@@ -255,6 +254,6 @@ html {
     opacity: 1;
     visibility: visible;
 }
-.visibleElement {
-    height: 0;
+.invisibleElement {
+    display: none;
 }
