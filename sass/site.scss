@@ -181,6 +181,7 @@ html {
         width: 100%;
 
         @media only screen and (max-width: $bp-medium){
+            // For some reason this works for mobile, but center does not
             background-position: top;
         }
     }
@@ -239,8 +240,17 @@ html {
 
 //ABOUT US
 .aboutus {
-    height: 100vh;
+    height: calc(100vh - #{$nav-height});
     background-color: $color-primary;
+}
+
+
+
+
+
+.contact {
+    height: 100vh;
+    background-color: $color-dark-gray;
 }
 
 

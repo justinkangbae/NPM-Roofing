@@ -173,8 +173,12 @@ html {
         background-color: #c90a0a; }
 
 .aboutus {
-  height: 100vh;
+  height: calc(100vh - 16vh);
   background-color: #c90a0a; }
+
+.contact {
+  height: 100vh;
+  background-color: #262626; }
 
 .whiteBackground {
   background-color: #fff; }
