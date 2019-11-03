@@ -8,6 +8,7 @@ const hamburgerMid = document.querySelector(".nav__hamburger--mid");
 const hamburgerBot = document.querySelector(".nav__hamburger--bot");
 const aboutus = document.querySelector(".aboutus");
 const contact = document.querySelector(".contact");
+const button = document.querySelector(".button");
 let topOffset = offset(navChange);
 let aboutusHeight, contactHeight;
 init();
@@ -53,6 +54,11 @@ navElement[5].addEventListener("click", () => {
     window.scrollTo(0, contactHeight);
 })
 
+//Contact button in header
+button.addEventListener("click", () => {
+    window.scrollTo(0, contactHeight);
+})
+
 //changes visibility of nav bar when hamburger element is clicked
 hamburger.addEventListener("click", () => {
     navBarVisibility();
@@ -79,8 +85,8 @@ function init() {
 
 //function to calculate the length to scroll for about us and contact buttons
 function getScrollHeights() {
-    aboutusHeight = aboutus.getBoundingClientRect().top - navAll.offsetHeight;
-    contactHeight = contact.getBoundingClientRect().top - navAll.offsetHeight;
+    aboutusHeight = aboutus.getBoundingClientRect().top + window.scrollY - navAll.offsetHeight;
+    contactHeight = contact.getBoundingClientRect().top + window.scrollY - navAll.offsetHeight;
 }
 
 //function to change visibility of the navbar and animate the hamburger menu

@@ -173,8 +173,29 @@ html {
         background-color: #c90a0a; }
 
 .aboutus {
+  align-items: center;
+  background-color: #c90a0a;
+  display: flex;
   height: calc(100vh - 16vh);
-  background-color: #c90a0a; }
+  justify-content: space-around; }
+  .aboutus__image {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 50%; }
+  .aboutus img {
+    height: 25rem;
+    width: 25rem; }
+  .aboutus__text {
+    color: #fff;
+    margin: 8rem;
+    width: 50%; }
+  .aboutus__title {
+    font-size: 6rem;
+    margin-bottom: 2rem; }
+  .aboutus__description {
+    font-size: 2rem;
+    line-height: 2.8rem; }
 
 .contact {
   height: 100vh;
@@ -185,9 +206,6 @@ html {
 
 .redText {
   color: #c90a0a; }
-
-.highlightText {
-  color: #ff2e2e; }
 
 .whiteText {
   color: #fff; }
