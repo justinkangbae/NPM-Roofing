@@ -1,0 +1,36 @@
+//ABOUT US
+.aboutus {
+    align-items: center;
+    background-color: $color-primary;
+    display: flex;
+    justify-content: space-around;
+    padding: 8rem 0 8rem 0;
+    
+    &__image {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        width: 50%;
+    }
+
+    img {
+        height: 25rem;
+        width: 25rem;
+    }
+
+    &__text {
+        color: $color-white;
+        margin: 8rem;
+        width: 50%;
+    }
+
+    &__title {
+        font-size: 6rem;
+        margin-bottom: 2rem;
+    }
+
+    &__description {
+        font-size: 2rem;
+        line-height: 2.8rem;
+    }
+}
