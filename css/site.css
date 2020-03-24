@@ -222,23 +222,30 @@
   .findus__text {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    justify-content: center;
+    color: #fff;
     width: 40%;
-    height: 100%; }
+    height: 50rem; }
     .findus__text--title {
       font-size: 6rem;
-      color: #fff;
-      padding: 5rem 0 5rem 0; }
+      padding-bottom: 5rem; }
+    .findus__text--description {
+      font-size: 2rem; }
+      .findus__text--description ul {
+        padding-left: 4rem; }
   .findus__map {
     height: 50rem;
-    width: 50rem; }
+    width: 60rem; }
 
 .footer {
   background-color: #262626;
-  height: 40vh;
+  height: 25vh;
   display: flex;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  color: #fff; }
+  .footer p {
+    font-size: 1.6rem; }
 
 * {
   margin: 0;

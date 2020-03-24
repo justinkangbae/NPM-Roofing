@@ -1,9 +1,12 @@
 .footer {
     background-color: $color-dark-gray;
-    height: 40vh;
+    height: 25vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    color: $color-white;
 
-    
+    p {
+        font-size: 1.6rem;
+    }
 }
