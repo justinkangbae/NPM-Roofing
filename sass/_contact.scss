@@ -7,7 +7,13 @@
 
     &__title {
         font-size: 6rem;
-        margin: 4rem;
+        margin: 4rem 0 1.5rem 0;
+        color: $color-white;
+    }
+
+    &__text {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
         color: $color-white;
     }
 
@@ -15,21 +21,32 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 50%;
+        width: 40%;
     }
 
     &__form * {
-        margin: 1.2rem;
-        padding: 1rem;
+        margin: 1rem;
+        padding: 0.8rem;
         width: 100%;
     }
 
     input[type=submit] {
         width: 40%;
+        padding: 1rem 0 1rem 0;
         border-radius: 2rem;
         background-color: $color-primary;
         border: none;
         color: $color-white;
         font-size: 1.6rem;
+        transition: all 0.2s;
+
+        &:hover {
+            background-color: $color-white;
+            color: $color-primary;
+        }
+
+        &:active {
+            transform: scale(0.98);
+        }
     }
 }

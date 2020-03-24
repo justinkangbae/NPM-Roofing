@@ -4,6 +4,8 @@
 @import "header";
 @import "aboutus";
 @import "contact";
+@import "findus";
+@import "footer";
 
 //SETUP
 * {
@@ -34,22 +36,6 @@ html {
         font-size: 25%;
     }
 }
-
-.map-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 8rem;
-    height: 100vh;
-    background-color: $color-primary;
-}
-
-#map {
-    height: 50rem;
-    width: 50rem;
-}
-
-
 
 .whiteBackground { background-color: $color-white; }
 .redText { color: $color-primary; }

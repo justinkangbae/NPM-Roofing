@@ -71,6 +71,7 @@
         <!-- CONTACT -->
         <section class="contact">
             <h4 class="contact__title">Contact Us</h4>
+            <p class="contact__text">Please ask us any questions, and we will respond to you as soon as possible!</p>
             <form action="" class="contact__form">
                 <input type="text" placeholder="Full Name">
                 <input type="email" placeholder="Email">
@@ -79,22 +80,40 @@
             </form>
         </section>
 
-        <div class="map-container">
-            <div id="map"></div>    
-        </div>
+        <!-- FIND US -->
+        <section class="findus">
+            <div class="findus__text">
+                <h4 class="findus__text--title">Find Us Here!</h4>
+
+                
+            </div>
+            
+
+            <div class="findus__map"></div>
+
+        </section>
 
     </main>
 
+    <!-- FOOTER -->
+    <footer class="footer">
+        
+    </footer>
+
     <script>
         var map;
+        var home = {lat: 33.038317, lng: -97.036614};
+
         function initMap() {
-          map = new google.maps.Map(document.getElementById('map'), {
-            center: {lat: 33.038317, lng: -97.036614},
-            zoom: 16
+          map = new google.maps.Map(document.querySelector('.findus__map'), {
+            center: home,
+            zoom: 15
           });
+
+          var marker = new google.maps.Marker({position: home, map: map});
         }
       </script>
-      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1a28-VyZyITRwQ_Vy2a7iEIogDbAsNl&callback=initMap"
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1a28-VyZyITRwQ_Vy2a7iEIogDbAsNl8&callback=initMap"
       async defer></script>
       <!-- insert 8 at end of api key to validate it -->
 

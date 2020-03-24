@@ -182,24 +182,63 @@
   background-color: #262626; }
   .contact__title {
     font-size: 6rem;
-    margin: 4rem;
+    margin: 4rem 0 1.5rem 0;
+    color: #fff; }
+  .contact__text {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
     color: #fff; }
   .contact__form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 50%; }
+    width: 40%; }
   .contact__form * {
-    margin: 1.2rem;
-    padding: 1rem;
+    margin: 1rem;
+    padding: 0.8rem;
     width: 100%; }
   .contact input[type=submit] {
     width: 40%;
+    padding: 1rem 0 1rem 0;
     border-radius: 2rem;
     background-color: #c90a0a;
     border: none;
     color: #fff;
-    font-size: 1.6rem; }
+    font-size: 1.6rem;
+    transition: all 0.2s; }
+    .contact input[type=submit]:hover {
+      background-color: #fff;
+      color: #c90a0a; }
+    .contact input[type=submit]:active {
+      transform: scale(0.98); }
+
+.findus {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8rem 6rem 8rem 6rem;
+  height: 100vh;
+  background-color: #c90a0a; }
+  .findus__text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 40%;
+    height: 100%; }
+    .findus__text--title {
+      font-size: 6rem;
+      color: #fff;
+      padding: 5rem 0 5rem 0; }
+  .findus__map {
+    height: 50rem;
+    width: 50rem; }
+
+.footer {
+  background-color: #262626;
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
 
 * {
   margin: 0;
@@ -223,18 +262,6 @@ html {
   @media only screen and (max-width: 25em) {
     html {
       font-size: 25%; } }
-
-.map-container {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 8rem;
-  height: 100vh;
-  background-color: #c90a0a; }
-
-#map {
-  height: 50rem;
-  width: 50rem; }
 
 .whiteBackground {
   background-color: #fff; }
