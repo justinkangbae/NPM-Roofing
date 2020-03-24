@@ -193,6 +193,9 @@
     flex-direction: column;
     align-items: center;
     width: 40%; }
+    @media only screen and (max-width: 55em) {
+      .contact__form {
+        width: 50%; } }
   .contact__form * {
     margin: 1rem;
     padding: 0.8rem;
@@ -217,25 +220,34 @@
   justify-content: space-between;
   align-items: center;
   padding: 8rem 6rem 8rem 6rem;
-  height: 100vh;
   background-color: #c90a0a; }
+  @media only screen and (max-width: 44em) {
+    .findus {
+      flex-direction: column; } }
   .findus__text {
     display: flex;
     flex-direction: column;
     justify-content: center;
     color: #fff;
     width: 40%;
-    height: 50rem; }
+    height: 50rem;
+    padding-bottom: 4rem; }
+    @media only screen and (max-width: 44em) {
+      .findus__text {
+        width: 75%; } }
     .findus__text--title {
       font-size: 6rem;
       padding-bottom: 5rem; }
+      @media only screen and (max-width: 44em) {
+        .findus__text--title {
+          text-align: center; } }
     .findus__text--description {
       font-size: 2rem; }
       .findus__text--description ul {
         padding-left: 4rem; }
   .findus__map {
-    height: 50rem;
-    width: 60rem; }
+    height: 45rem;
+    width: 50rem; }
 
 .footer {
   background-color: #262626;
@@ -244,6 +256,15 @@
   align-items: center;
   justify-content: center;
   color: #fff; }
+  @media only screen and (max-width: 55em) {
+    .footer {
+      height: 20vh; } }
+  @media only screen and (max-width: 44em) {
+    .footer {
+      height: 15vh; } }
+  @media only screen and (max-width: 35em) {
+    .footer {
+      height: 10vh; } }
   .footer p {
     font-size: 1.6rem; }
 

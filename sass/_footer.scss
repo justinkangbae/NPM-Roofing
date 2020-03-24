@@ -6,6 +6,18 @@
     justify-content: center;
     color: $color-white;
 
+    @media only screen and (max-width: $bp-large) {
+        height: 20vh;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+        height: 15vh;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        height: 10vh;
+    }
+
     p {
         font-size: 1.6rem;
     }

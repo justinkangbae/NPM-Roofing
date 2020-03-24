@@ -3,8 +3,11 @@
     justify-content: space-between;
     align-items: center;
     padding: 8rem 6rem 8rem 6rem;
-    height: 100vh;
     background-color: $color-primary;
+
+    @media only screen and (max-width: $bp-medium) {
+        flex-direction: column;
+    }
 
     &__text {
         display: flex;
@@ -13,10 +16,19 @@
         color: $color-white;
         width: 40%;
         height: 50rem;
+        padding-bottom: 4rem;
+
+        @media only screen and (max-width: $bp-medium) {
+            width: 75%;
+        }
 
         &--title {
             font-size: 6rem;
             padding-bottom: 5rem;
+
+            @media only screen and (max-width: $bp-medium) {
+                text-align: center;
+            }
         }
 
         &--description {
@@ -31,8 +43,7 @@
     
 
     &__map {
-        height: 50rem;
-        width: 60rem;
-        
+        height: 45rem;
+        width: 50rem;
     }
 }
